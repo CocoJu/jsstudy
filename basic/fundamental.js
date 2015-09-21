@@ -1,5 +1,6 @@
 // JavaScript: ECMA + BOM + DOM
-// plog("",);
+// plog("",); - log to page
+
 function data_types(){
     /**
      * Data types: Number:
@@ -106,6 +107,7 @@ function variables(){
 
     var first_name;
     var lastName;
+    var firstLastUserName;
 
 }
 
