@@ -1,11 +1,6 @@
 // JavaScript: ECMA + BOM + DOM
 // log(""); - log to page
 
-var $eval = "eval";
-var $h = "h";
-// plog = page logger
-var log = plog;
-
 function data_types(){
     /**
      * Data types: Number:
@@ -113,7 +108,3 @@ function variables(){
     var firstLastUserName;
 
 }
-
-variables();
-data_types();
-operators();

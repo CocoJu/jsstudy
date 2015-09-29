@@ -30,3 +30,8 @@ function result_message(description, result) {
     description += comment;
         return {type:"simple", body:description + separator + result};
 }
+
+var $eval = "eval";
+var $h = "h";
+// plog = page logger
+var log = plog;
