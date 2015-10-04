@@ -12,7 +12,7 @@ function cycles(){
     log(placeholder, ["cycle ++i result"])
 
     /*
-    ** instructions divider in condition cycle for is "," instead ";"
+    ** instructions divider in condition cycle FOR is "," instead ";"
      */
     for(var cnt = 1, result = 1, num = 2, exp = 10;
             cnt <= exp;

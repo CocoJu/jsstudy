@@ -1,5 +1,7 @@
 //variables();
 //data_types();
 //operators();
-test_namespace();
-cycles();
+//test_namespace();
+//function_declaration();
+//cycles();
+objects();

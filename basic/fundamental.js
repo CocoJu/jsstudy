@@ -43,6 +43,14 @@ function data_types(){
     log("Boolean('anystring')", [$eval]);
     log("Boolean(0)", [$eval]);
     log("Boolean(-1)",[$eval]);
+
+    /**
+     * Data type: Object:
+     */
+    log("data types: Object:", [$h]);
+    log("typeof({field1:'field1', field2:'field2'})", [$eval]);
+    log("typeof({})", [$eval]);
+
 }
 
 function operators(){

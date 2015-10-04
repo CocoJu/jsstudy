@@ -15,7 +15,27 @@ function test_namespace(){
 
 }
 
+/**
+ * circuit example
+ * need global namespace
+ */
+
+function make_add(base){
+    return function(num){
+        return num + base;
+    }
+}
+var add_two = make_add(2);
+var add_five = make_add(5);
+
 function function_declaration(){
+    log("function_declaration", [$h]);
+    /**
+     * circuit example
+     */
+    log("add_two(5)",[$eval]);
+    log("add_five(10)", [$eval]);
+
     // IMPORTANT!
     /**
      * function available because before perform sctipt, interpretress analyse this file
@@ -26,7 +46,7 @@ function function_declaration(){
     /**
      * function not available - foo not assigned
      */
-    foo();
+    //foo();
 
     var foo = function(){
         log("function foo performed");
@@ -36,19 +56,7 @@ function function_declaration(){
         log("function bar performed");
     }
 
-    /**
-     * circuit example
-     */
 
-    function make_add(base){
-        return function(){
-            return num + base;
-        }
-    }
-    var add_two = make_add(2);
-    log("add_two(10)",[$eval]);
-    var add_five = make_add(5);
-    log("add_five(10)", [$eval]);
 
 }
 
