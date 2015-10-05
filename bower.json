@@ -1,6 +1,7 @@
 {
 	"name": "JsStudy",
 	"dependencies": {
-		"jquery": "~2.0.3"
+		"jquery": "~2.0.3",
+	  	"qunit": "~1.19.0"
 	}
 }

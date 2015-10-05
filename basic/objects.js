@@ -69,7 +69,7 @@ function objects(){
     arr[10] = "ten";
     log(arr.length, ["length array after: arr[10] = 'ten'"]);
     arr.length = 4;
-    log(arr.length, ["length array after: arr.length = 4"]);
+    log(arr.length, ["length array after: arr.length = 4, .lenght property from array writable"]);
     log(arr[10], ["get 10-th element arr"]);
 
     /**
@@ -104,18 +104,21 @@ function objects(){
         "sort() comparing numeric value, " +
             "need put as argument function-comparator"]);
 
-    log("arr_global.pop()",[$eval]);
-    log("arr_global",[$eval, "after pop"]);
-    log("arr_global.push(121)",[$eval]);
-    log("arr_global",[$eval, "after push"]);
-    log("arr_global.shift()",[$eval]);
-    log("arr_global",[$eval, "after shift"]);
-    log("arr_global.unshift(9)",[$eval]);
-    log("arr_global",[$eval, "after unshift"]);
+    log("arr_global.pop()", [$eval]);
+    log("arr_global", [$eval, "after pop"]);
+    log("arr_global.push(121)", [$eval]);
+    log("arr_global", [$eval, "after push"]);
+    log("arr_global.shift()", [$eval]);
+    log("arr_global", [$eval, "after shift"]);
+    log("arr_global.unshift(9)", [$eval]);
+    log("arr_global", [$eval, "after unshift"]);
 
-    log("arr_global.splice(1,2)",[$eval]);
-    log("arr_global",[$eval, "after splice"]);
-    log("arr_global.splice(1,0,3,2,1,0)",[$eval]);
-    log("arr_global",[$eval, "after splice"]);
+    log("arr_global.splice(1,2)", [$eval]);
+    log("arr_global", [$eval, "after splice"]);
+    log("arr_global.splice(1,0,3,2,1,0)", [$eval]);
+    log("arr_global", [$eval, "after splice"]);
+
+    log("window.obj.provider", [$eval, "all function and variables declared in global" +
+        " namespace always belong to the global object window"]);
 
 }
