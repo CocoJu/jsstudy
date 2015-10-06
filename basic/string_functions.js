@@ -4,6 +4,8 @@ function substrCount(str, findStr, offset, length){
     if (length === undefined) {
         str = str.slice(offset);
     } else{
+        if(offset + length > str.length)
+            return false;
         str = str.slice(offset, offset + length);
     }
     var count = 0;
