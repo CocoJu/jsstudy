@@ -1,7 +1,7 @@
 function substrCount(str, findStr, offset, length){
-    if(offset === undefined)
+    if(isNaN(offset))
         var offset = 0;
-    if (length === undefined) {
+    if (isNaN(length)) {
         str = str.slice(offset);
     } else{
         if(offset + length > str.length)
@@ -10,10 +10,9 @@ function substrCount(str, findStr, offset, length){
     }
     var count = 0;
     var pos = 0;
-    var lastPos;
-    while((lastPos = str.indexOf(findStr, pos)) != -1){
+    while(( pos = str.indexOf(findStr, pos)) != -1){
         count ++;
-        pos = lastPos + findStr.length;
+        pos += findStr.length;
     }
     return count;
 }
