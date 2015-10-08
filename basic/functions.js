@@ -11,8 +11,6 @@ function test_namespace(){
     }
     foo(true);
     log(x);
-
-
 }
 
 /**
@@ -55,9 +53,6 @@ function function_declaration(){
     function bar(){
         log("function bar performed");
     }
-
-
-
 }
 
 

@@ -13,3 +13,12 @@ QUnit.test( "substrCount() test", function( assert ) {
     assert.ok( substrCount(test_string, "go", 14, 10) == false, "offcet + lenght > input string length");
     assert.ok( substrCount(test_string, "go", 7, 11) == false, "offcet + lenght > input string length");
 });
+
+QUnit.test( "substrCount() test", function( assert ) {
+    assert.ok( strPad("abc", 2) == "ab", "Return sliced string");
+    assert.ok( strPad("abc", 3) == "abc", "Return the same string");
+    assert.ok( strPad("abc", 10) == "abc", "Return the same string if length argument > size string");
+    assert.ok( strPad("abc", 5, "*") == "abc**", "Return string with filled string");
+    assert.ok( strPad("abc", 5, "*", "STRING_LEFT") == "**abc", "Return string with filled at LEFT");
+    assert.ok( strPad("abc", 7, "**abc**", "STRING_BOTH") == "**abc**", "Return string with filled at BOTH");
+});
