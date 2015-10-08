@@ -25,7 +25,7 @@ function substrCount(str, findStr, offset, length){
  * @param str - current string
  * @param returnSrgingSize - length returned string
  * @param placeholder - fill string if returnStringSize param > str.length
- * @param [fillIn] - can be "STRING_LEFT", "STRING_BOTH", if param not
+ * @param [fillIn] - can be "FILL_LEFT", "FILL_BOTH", if param not
  *                   not transferred, filling at right
  */
 function strPad(str, returnSrgingSize, placeholder, fillIn){
@@ -35,16 +35,16 @@ function strPad(str, returnSrgingSize, placeholder, fillIn){
     if(str.length > returnSrgingSize)
         return str.slice(0, returnSrgingSize);
     while(str.length < returnSrgingSize){
-        if( fillIn == "STRING_LEFT")
+        if( fillIn == "FILL_LEFT")
             str = placeholder + str;
-        else if(fillIn == "STRING_BOTH")
+        else if(fillIn == "FILL_BOTH")
             str = placeholder + str + placeholder;
         else
             str += placeholder;
     }
-    if(fillIn == "STRING_LEFT")
+    if(fillIn == "FILL_LEFT")
         return str.slice(str.length - returnSrgingSize)
-    else if(fillIn == "STRING_BOTH"){
+    else if(fillIn == "FILL_BOTH"){
         var offset = (str.length - returnSrgingSize) / 2;
         return str.slice(offset, offset + returnSrgingSize);
     }

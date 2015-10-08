@@ -19,6 +19,6 @@ QUnit.test( "substrCount() test", function( assert ) {
     assert.ok( strPad("abc", 3) == "abc", "Return the same string");
     assert.ok( strPad("abc", 10) == "abc", "Return the same string if length argument > size string");
     assert.ok( strPad("abc", 5, "*") == "abc**", "Return string with filled string");
-    assert.ok( strPad("abc", 5, "*", "STRING_LEFT") == "**abc", "Return string with filled at LEFT");
-    assert.ok( strPad("abc", 7, "**abc**", "STRING_BOTH") == "**abc**", "Return string with filled at BOTH");
+    assert.ok( strPad("abc", 5, "*", "FILL_LEFT") == "**abc", "Return string with filled at LEFT");
+    assert.ok( strPad("abc", 7, "**abc**", "FILL_BOTH") == "**abc**", "Return string with filled at BOTH");
 });

@@ -4,5 +4,5 @@
 //test_namespace();
 //function_declaration();
 //cycles();
-objects();
-
+//objects();
+_regexp();
